@@ -1,7 +1,7 @@
 # Pager for BUSY Bar
 
 Your own notifications on your BUSY Bar. Anything that can send a web request (a script, your phone, GitHub,
-Home Assistant, a Slack automation) sends a message to an [ntfy](https://ntfy.sh) topic, and the bar shows it,
+Home Assistant, Slack) sends a message to an [ntfy](https://ntfy.sh) topic, and the bar shows it,
 colored by how urgent it is. Turn the wheel to go through them; press Start when you've dealt with one.
 
 <!-- screenshots: screenshots/front-*.png, screenshots/back-*.png -->
@@ -58,9 +58,9 @@ curl -H "Title: Deploy" -H "Priority: urgent" -d "Prod deploy failed, rolling ba
 
 Priorities are `min`, `low`, `default`, `high` and `urgent` (or 1 to 5).
 
-- **Slack direct messages.** Use an automation service: in Zapier, Make or n8n, trigger on a new Slack direct
-  message and send a web request (POST) to `https://ntfy.sh/your-topic` with the sender as the `Title` header and the
-  text as the body. Some services need a paid plan for web requests. *(Not yet tested end to end.)*
+- **Slack direct messages:** the [Slack bridge](bridges/slack/README.md) in this repo puts **Slack: Justin** on
+  your bar within seconds of a DM, with a link to the conversation. Sender only by default, never the text. One
+  file, no server needed.
 - **Every notification on an Android phone** (WhatsApp, Signal, Messenger, texts, Slack): with
   [MacroDroid](https://www.macrodroid.com) or [Tasker](https://tasker.joaoapps.com), make a "notification received"
   trigger with an HTTP POST action to your topic. iPhones don't let apps read other apps' notifications, so this
