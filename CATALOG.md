@@ -1,4 +1,4 @@
-Your own notifications on your BUSY Bar, from anything that can send a web request: a script, your phone, GitHub, Home Assistant, a Slack automation. Send to an [ntfy](https://ntfy.sh) topic and it's on your desk a few seconds later, colored by how urgent it is.
+Your own notifications on your BUSY Bar, from anything that can send a web request: a script, your phone, GitHub, Home Assistant, Slack. Send to an [ntfy](https://ntfy.sh) topic and it's on your desk a few seconds later, colored by how urgent it is.
 
 ## What it does
 
@@ -25,7 +25,7 @@ Until you set a topic, the app shows sample messages so you can see how it looks
 
 ## Ideas
 
-- **Slack direct messages:** a Zapier, Make or n8n automation that posts each new DM to your topic.
+- **Slack direct messages:** the Slack bridge in the app's repository shows who sent you a DM within seconds (sender only, never the text).
 - **Every phone notification on Android:** MacroDroid or Tasker forwards WhatsApp, Signal, texts and more.
 - **CI and deploys:** one curl line at the end of a GitHub Actions job.
 - **Home Assistant:** the doorbell, the washer, a door left open.
