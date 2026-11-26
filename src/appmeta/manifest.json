@@ -1,0 +1,9 @@
+{
+  "format_version": 1,
+  "id": "com.vroombrick.pager",
+  "name": "Pager",
+  "version": "0.1.0",
+  "api_version": "27.14.0",
+  "description": "Your own notifications on the BUSY Bar, sent from anything through ntfy",
+  "author": "VroomBrick"
+}

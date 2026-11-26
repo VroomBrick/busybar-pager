@@ -1,0 +1,66 @@
+{
+  "format_version": 1,
+  "version": 1,
+  "fields": {
+    "topic": {
+      "type": "string",
+      "label": "ntfy topic",
+      "description": "The topic you send to, like mydesk-7f3k. Anyone who knows it can send, so pick something hard to guess. demo shows sample messages.",
+      "default": "demo",
+      "max_length": 64
+    },
+    "server": {
+      "type": "string",
+      "label": "ntfy server",
+      "description": "https://ntfy.sh, or the address of your own ntfy server.",
+      "default": "https://ntfy.sh",
+      "max_length": 128
+    },
+    "token": {
+      "type": "string",
+      "label": "Access token",
+      "description": "Optional, for a protected topic: a token that starts with tk_.",
+      "default": "",
+      "max_length": 64,
+      "sensitive": true
+    },
+    "interval": {
+      "type": "integer",
+      "label": "Seconds between checks",
+      "description": "How often the bar asks the server for new messages.",
+      "default": 30,
+      "min": 10,
+      "max": 600
+    },
+    "min_priority": {
+      "type": "enum",
+      "label": "Show from priority",
+      "description": "Messages below this priority are left out.",
+      "default": "1",
+      "options": [
+        { "value": "1", "label": "Min (all)" },
+        { "value": "2", "label": "Low" },
+        { "value": "3", "label": "Default" },
+        { "value": "4", "label": "High" },
+        { "value": "5", "label": "Urgent only" }
+      ]
+    },
+    "sound": {
+      "type": "enum",
+      "label": "Sound",
+      "description": "A sound when a message of this priority or higher arrives.",
+      "default": "5",
+      "options": [
+        { "value": "off", "label": "Off" },
+        { "value": "4", "label": "High and urgent" },
+        { "value": "5", "label": "Urgent only" }
+      ]
+    },
+    "blink": {
+      "type": "boolean",
+      "label": "Blink the light",
+      "description": "Blink the status light in the message's color when one arrives.",
+      "default": true
+    }
+  }
+}
