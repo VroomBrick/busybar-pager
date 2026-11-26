@@ -1,0 +1,30 @@
+# Slack app manifest for Pager's Slack bridge. Paste it at https://api.slack.com/apps -> Create New App ->
+# From a manifest. It reads, as you, your direct messages and the channels you are in (to find @mentions of you),
+# and people's and channels' names. It cannot post anything.
+display_information:
+  name: Pager
+  description: Puts who DMed or mentioned you on your BUSY Bar, through ntfy.
+  background_color: "#1e2240"
+features: {}
+oauth_config:
+  scopes:
+    user:
+      - im:history
+      - mpim:history
+      - channels:history
+      - groups:history
+      - channels:read
+      - groups:read
+      - users:read
+settings:
+  event_subscriptions:
+    user_events:
+      - message.im
+      - message.mpim
+      - message.channels
+      - message.groups
+  interactivity:
+    is_enabled: false
+  org_deploy_enabled: false
+  socket_mode_enabled: true
+  token_rotation_enabled: false
